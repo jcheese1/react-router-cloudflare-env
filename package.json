@@ -9,7 +9,9 @@
 		"preview": "pnpm run build && wrangler dev",
 		"typecheck": "react-router typegen && tsc",
 		"reveal": "react-router reveal",
-		"deploy": "wrangler deploy"
+		"deploy": "react-router build && wrangler deploy",
+		"deploy:version": "react-router build && wrangler versions upload",
+		"deploy:promote": "wrangler versions deploy"
 	},
 	"dependencies": {
 		"@react-router/cloudflare": "^7.1.5",
