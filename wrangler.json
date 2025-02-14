@@ -1,0 +1,14 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "example-cloudflare-worker",
+	"main": "./worker.ts",
+	"compatibility_date": "2025-02-04",
+	"assets": {
+		"directory": "./build/client"
+	},
+	"compatibility_flags": ["nodejs_compat"],
+	"vars": {
+		"SUPER_SECRET": "super-secret",
+		"PUBLIC_ENV": "public-env"
+	}
+}
