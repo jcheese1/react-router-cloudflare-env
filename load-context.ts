@@ -1,10 +1,10 @@
 // load-context.ts
-import type { AppLoadContext } from "react-router";
+import type { AppLoadContext } from "@react-router/cloudflare";
 import type { PlatformProxy } from "wrangler";
 
 type Cloudflare = Omit<PlatformProxy, "dispose">;
 
-declare module "react-router" {
+declare module "@react-router/cloudflare" {
 	interface AppLoadContext {
 		cloudflare: Cloudflare;
 		extra: string;

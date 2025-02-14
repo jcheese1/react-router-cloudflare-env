@@ -1,5 +1,6 @@
 import { type } from "arktype";
 import { getContext } from "hono/context-storage";
+import type { HonoEnv } from "server";
 
 export const env = type({
 	PUBLIC_ENV: "string",
@@ -7,10 +8,6 @@ export const env = type({
 });
 
 export type Env = typeof env.infer;
-
-export interface HonoEnv {
-	Variables: Env;
-}
 
 export type PublicEnv = {
 	[K in keyof Env as K extends `PUBLIC_${string}` ? K : never]: Env[K];

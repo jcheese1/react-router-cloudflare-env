@@ -7,6 +7,7 @@
 		"dev": "react-router dev",
 		"start": "wrangler dev",
 		"preview": "pnpm run build && wrangler dev",
+		"preview:wrangler": "wrangler dev",
 		"typecheck": "react-router typegen && tsc",
 		"reveal": "react-router reveal",
 		"deploy": "react-router build && wrangler deploy",
@@ -14,20 +15,22 @@
 		"deploy:promote": "wrangler versions deploy"
 	},
 	"dependencies": {
-		"@react-router/cloudflare": "^7.1.5",
-		"@react-router/serve": "^7.1.5",
+		"@react-router/cloudflare": "^7.2.0-pre.2",
+		"@react-router/serve": "^7.2.0-pre.2",
 		"arktype": "^2.0.4",
 		"hono": "^4.7.1",
 		"hono-react-router-adapter": "^0.6.2",
 		"isbot": "^5.1.17",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
-		"react-router": "^7.1.5",
+		"react-router": "^7.2.0-pre.2",
 		"wrangler": "^3.109.0"
 	},
 	"devDependencies": {
+		"@cloudflare/vite-plugin": "^0.1.0",
+		"@cloudflare/workers-types": "^4.20250204.0",
 		"@hono/vite-dev-server": "^0.18.1",
-		"@react-router/dev": "^7.1.5",
+		"@react-router/dev": "^7.2.0-pre.2",
 		"@tailwindcss/vite": "^4.0.0",
 		"@types/node": "^20",
 		"@types/react": "^19.0.1",
@@ -35,7 +38,7 @@
 		"react-router-devtools": "^1.1.0",
 		"tailwindcss": "^4.0.0",
 		"typescript": "^5.7.2",
-		"vite": "^5.4.11",
+		"vite": "^6.1.0",
 		"vite-tsconfig-paths": "^5.1.4"
 	}
 }

@@ -7,7 +7,7 @@
 	],
 	"compilerOptions": {
 		"lib": ["DOM", "DOM.Iterable", "ES2022"],
-		"types": ["node", "vite/client"],
+		"types": ["node", "vite/client", "@cloudflare/workers-types/2023-07-01"],
 		"target": "ES2022",
 		"module": "ES2022",
 		"moduleResolution": "bundler",
@@ -17,6 +17,7 @@
 		"paths": {
 			"~/*": ["./app/*"]
 		},
+
 		"esModuleInterop": true,
 		"verbatimModuleSyntax": true,
 		"noEmit": true,

@@ -1,9 +1,13 @@
 import { Hono } from "hono";
 import { contextStorage } from "hono/context-storage";
-import { type Env, type HonoEnv, getPublicEnv, init } from "~/env.server";
+import { type Env, type PublicEnv, getPublicEnv, init } from "~/env.server";
+
+export interface HonoEnv {
+	Variables: Env;
+}
 
 const global = globalThis as typeof globalThis & {
-	__context: Env;
+	ENV: PublicEnv;
 };
 
 export const initializePublicEnv = () => {

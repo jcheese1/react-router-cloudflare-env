@@ -10,5 +10,19 @@
 	"vars": {
 		"SUPER_SECRET": "super-secret",
 		"PUBLIC_ENV": "public-env"
-	}
+	},
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "COUNTER",
+				"class_name": "Counter"
+			}
+		]
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_classes": ["Counter"]
+		}
+	]
 }
